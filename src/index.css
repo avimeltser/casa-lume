@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f4ede4;
+  color: #2c211b;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(141, 166, 170, 0.28);
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.28em] text-lume-olive;
+  }
+
+  .display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
