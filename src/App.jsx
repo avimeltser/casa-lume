@@ -1,21 +1,23 @@
 import React from 'react';
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 
+const base = import.meta.env.BASE_URL;
+
 const rooms = [
   {
     name: 'The Courtyard Suite',
     detail: 'A private terrace, poured stone floors, linen drapery, and morning light that moves slowly across the room.',
-    image: '/images/suite.jpg',
+    image: `${base}images/suite.jpg`,
   },
   {
     name: 'The Sea Room',
     detail: 'A quieter corner of the house with a restrained palette, a shaded sitting niche, and a direct view to the horizon.',
-    image: '/images/hero.jpg',
+    image: `${base}images/hero.jpg`,
   },
   {
     name: 'The Shade Loft',
     detail: 'Textured plaster, a deep bath, and a compact plan that feels more like a coastal residence than a hotel room.',
-    image: '/images/atmosphere.jpg',
+    image: `${base}images/atmosphere.jpg`,
   },
 ];
 
@@ -107,7 +109,7 @@ export default function App() {
 
       <section className="relative overflow-hidden">
         <motion.div style={{ y: heroY, scale: heroScale }} className="absolute inset-0">
-          <img src="/images/hero.jpg" alt="Casa Lume terrace" className="h-full w-full object-cover" />
+          <img src={`${base}images/hero.jpg`} alt="Casa Lume terrace" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,244,230,0.34),transparent_38%),linear-gradient(180deg,rgba(43,30,20,0.25),rgba(43,30,20,0.45))]" />
         </motion.div>
 
@@ -198,7 +200,7 @@ export default function App() {
 
       <section className="relative overflow-hidden py-14 sm:py-20 lg:py-24">
         <div className="absolute inset-0">
-          <img src="/images/atmosphere.jpg" alt="Casa Lume stair and curtain" className="h-full w-full object-cover" />
+          <img src={`${base}images/atmosphere.jpg`} alt="Casa Lume stair and curtain" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(24,18,14,0.48),rgba(24,18,14,0.12)_52%,rgba(24,18,14,0.38))]" />
         </div>
         <div className="relative section-shell min-h-[34rem] flex items-end">
@@ -217,7 +219,7 @@ export default function App() {
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <Reveal>
             <div className="relative overflow-hidden rounded-[2rem] shadow-soft">
-              <img src="/images/dining.jpg" alt="Casa Lume dining table" className="h-[32rem] w-full object-cover" />
+              <img src={`${base}images/dining.jpg`} alt="Casa Lume dining table" className="h-[32rem] w-full object-cover" />
             </div>
           </Reveal>
           <Reveal delay={0.08}>
